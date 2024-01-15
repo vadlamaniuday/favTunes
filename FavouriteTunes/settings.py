@@ -75,9 +75,18 @@ WSGI_APPLICATION = "FavouriteTunes.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "URL": "postgresql://postgres:gD24c2FFf*EF2AGGDg51eDcaaEc16gce@viaduct.proxy.rlwy.net:36370/railway",
+        "NAME": "railway",
+        "USER": "postgres",
+        "PASSWORD": "gD24c2FFf*EF2AGGDg51eDcaaEc16gce",
+        "HOST": "viaduct.proxy.rlwy.net",
+        "PORT": "36370",
     }
 }
 
