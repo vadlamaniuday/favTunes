@@ -1,8 +1,9 @@
 {
     "builds": [
       {
-        "src": "django_app_name/wsgi.py",
-        "use": "@vercel/python"
+        "src": "FavouriteTunes/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" }
       }
     ],
     "routes": [
