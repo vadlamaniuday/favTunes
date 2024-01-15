@@ -1,0 +1,34 @@
+{% extends 'GroovyRhythm/base.html' %} {% block content %}
+<h2>Artists</h2>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Artists</th>
+      <th>Number of Songs</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for artist in artists_with_song_count %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>
+      
+        {{ artist.name }}
+        </a>
+      </td>
+
+      <td>{{ artist.song_count }}</td>
+
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="3">No songs available.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+{% endblock %}
